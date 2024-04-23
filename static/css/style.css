@@ -1,0 +1,208 @@
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --dark-blue-color: #001b44;
+    --dark-color: #333;
+    --secundary-dark-color: rgb(34, 34, 34);
+    --light-color: #e3fcff;
+
+    --transparent_black: rgba(0, 0, 0, 0.1);
+
+    --ai-red: rgb(255, 0, 85);
+    --not-ai-green: rgb(67, 238, 167);
+}
+
+.magic {
+    color: #bef9ff;
+    cursor: default;
+    transition: all 2s;
+}
+
+.magic:hover{
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--light-color);
+    transition: all 2s;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--dark-blue-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 14px var(--dark-color);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: white;
+    font-size: 2.7em;
+    text-shadow: 0 0 2px var(--transparent_black);
+}
+
+p {
+    color: var(--light-color);
+    font-size: 1.2em;
+}
+
+.upload-form .form-group {
+    margin-bottom: 15px;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+}   
+
+.file-label {
+    background-color: var(--secondary-color); /* Cor de fundo chamativa */
+    color: #ffffff;
+    padding: 15px 30px; /* Aumentar o padding para tornar o botão maior */
+    border-radius: 5px;
+    font-size: 18px; /* Tamanho de fonte maior para mais destaque */
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px; /* Espaçamento do botão de submit */
+    transition: all 0.3s;
+}
+
+.file-label:hover {
+    background-color: var(--primary-color); /* Cor ao passar o mouse */ 
+    box-shadow: 0 0 10px var(--secondary-color);
+    transform: scale(1.1);
+    
+    transition: all 0.2s;
+}
+
+.file-input:focus + .file-label {
+    box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.5);
+}
+
+
+.submit-btn {
+    background-color: var(--dark-color); /* Uma cor secundária mais discreta */
+    color: #fff;
+    padding: 5px 10px; /* Reduzir o padding */
+    border-radius: 5px;
+    font-size: 14px; /* Diminuir o tamanho da fonte */
+    font-weight: normal; /* Fonte normal para ser mais discreto */
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid var(--transparent_black); 
+    transition: all 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #005f8a; 
+    transition: all 0.2s;
+}
+
+
+/* Estilos para o h1 */
+h1.not-ai {
+    color: var(--not-ai-green);
+    text-shadow: 1px 1px 1px var(--light-color);
+}
+
+h1.ai {
+    color: var(--ai-red);
+    text-shadow: 1px 1px 1px var(--light-color);
+}
+
+/* Estilos adicionais para o h2 */
+h2.not-ai {
+    font-size: 23px;
+    font-style: italic;
+    color: var(--light-color);
+    text-shadow: 1px 1px 1px var(--not-ai-green);
+}
+
+h2.ai {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--light-color);
+    text-shadow: 1px 1px 1px var(--ai-red);
+
+}
+
+.try-another-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: background-color 0.3s;
+}
+
+.try-another-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.info {
+    color: #31708f;
+    background-color: #d9edf7;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.error {
+    color: #a94442;
+    background-color: #f2dede;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.model-info {
+    padding-top: 10px;
+    font-size: x-small; /* Adjusts the font size to be smaller */
+    color: rgba(211, 211, 211, 0.692); /* Sets the text color to light grey */
+}
+
+.model-name {
+    color: var(--light-color); 
+    font-weight: bold; 
+
+}
+
+.model-link {
+    color: var(--primary-color); /* Use your primary color variable */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+.model-link:hover {
+    text-decoration: underline; /* Optional: adds underline on hover for better UX */
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .file-input, .submit-btn {
+        padding: 15px;
+        font-size: 14px;
+    }
+}

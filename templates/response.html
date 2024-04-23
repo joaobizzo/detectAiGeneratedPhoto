@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detecting AI generated images</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="{{ response_class }}">This photo is {{ response }}</h1>
+        <h2 class="{{ response_class }}">Acuracy: {{ score_text }}</h2>
+        <p class="model-info">Build with <span class="model-name">SDXL Detector</span> model.<a href="https://huggingface.co/Organika/sdxl-detector" target="_blank" class="model-link">Click here</a> to know more about this model.</p>
+        <a href="{{ url_for('home') }}" class="try-another-btn">Try another photo</a>
+    </div>
+    
+
+
+
+
+
+
+</body>
